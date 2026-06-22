@@ -44,11 +44,15 @@ export default function Home() {
           <Typography level="h2" sx={{ mb: 2 }}>
             Getting Started
           </Typography>
-          <Typography sx={{ mb: 2 }}>
-            Wynncraft is the largest MMORPG in Minecraft. Connect to the server at{' '}
-            <Chip variant="soft" color="primary">play.wynncraft.com</Chip>{' '}
-            (Minecraft 1.20.2+)
-          </Typography>
+          <Box sx={{ mb: 2 }}>
+            <Typography component="span">
+              Wynncraft is the largest MMORPG in Minecraft. Connect to the server at{' '}
+            </Typography>
+            <Chip variant="soft" color="primary">play.wynncraft.com</Chip>
+            <Typography component="span">
+              {' '}(Minecraft 1.20.2+)
+            </Typography>
+          </Box>
           <Stack spacing={1}>
             <Typography>• Choose your class carefully - each has unique playstyles</Typography>
             <Typography>• You get 2 skill points per level (max 200 at level 101)</Typography>
