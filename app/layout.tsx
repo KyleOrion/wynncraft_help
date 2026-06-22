@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google'
-import { CssVarsProvider } from '@mui/joy/styles'
-import CssBaseline from '@mui/joy/CssBaseline'
 import type { Metadata } from 'next'
+import ThemeRegistry from './components/ThemeRegistry'
 import Header from './components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,13 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <CssVarsProvider defaultMode="dark">
-          <CssBaseline />
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        <ThemeRegistry>
           <Header />
           {children}
-        </CssVarsProvider>
+        </ThemeRegistry>
       </body>
     </html>
   )
